@@ -45,7 +45,8 @@
 
   "links": {
     "paper": "",
-    "code": "https://github.com/WagnerVic/soccer-broadcast-pose"
+    "code": "https://github.com/WagnerVic/soccer-broadcast-pose",
+    "video": "https://youtu.be/2859_2A-VEc"
   },
 
   "hero": {
@@ -117,6 +118,34 @@
     "pt": "A estimação de pose de jogadores em vídeo de transmissão apoia a análise tática e biomecânica, mas o domínio é hostil: jogadores ocupam regiões minúsculas, sob borrão, oclusão e poses atípicas, degradando a precisão de localização dos estimadores genéricos. Este trabalho avalia, estágio a estágio e de forma quantitativa, um pipeline para o problema: escolhe o detector e o estimador por benchmark (este, um <em>zero-shot</em> de três modelos no 3DSP) e adapta o estimador ao domínio por <em>fine-tuning</em>. O detector escolhido (YOLO26x) atinge mAP 84,4% e <em>recall</em> 95,4%; o <em>fine-tuning</em> do estimador (RTMPose-X) eleva o PCK@0,2 de 41,8% para 67,2 ± 0,1% (média de 10 execuções), fornecendo a avaliação quantitativa que faltava ao domínio.",
     "es": "La estimación de la pose de jugadores de fútbol a partir de vídeo de transmisión respalda el análisis táctico y biomecánico, pero el dominio es hostil: los jugadores ocupan regiones diminutas de la imagen, con desenfoque de movimiento, oclusiones y poses atípicas, lo que degrada la precisión de localización de los estimadores genéricos. Este trabajo evalúa, etapa por etapa y de forma cuantitativa, un pipeline para el problema: elige el detector y el estimador mediante benchmarks (en el caso del estimador, una evaluación <em>zero-shot</em> de tres modelos en 3DSP) y adapta el estimador al dominio mediante ajuste fino. El detector elegido (YOLO26x) alcanza un mAP del 84,4 % y un <em>recall</em> del 95,4 %; el ajuste fino del estimador (RTMPose-X) eleva el PCK@0,2 del 41,8 % al 67,2 ± 0,1 % (media de 10 ejecuciones), lo que aporta la evaluación cuantitativa de la que carecía el dominio.",
     "zh": "从转播视频中估计足球运动员的姿态可为战术和生物力学分析提供支持，但这一领域条件严苛：球员在图像中只占极小的区域，并伴有运动模糊、遮挡和非典型姿态，从而降低了通用估计器的定位精度。本文针对这一问题，逐阶段、定量地评估了一套处理流程：通过基准测试选择检测器和姿态估计器（后者为三个模型在 3DSP 上的零样本评估），并通过微调使估计器适应该领域。所选检测器（YOLO26x）的 mAP 达到 84.4%，召回率达到 95.4%；对估计器（RTMPose-X）进行微调后，PCK@0.2 从 41.8% 提升至 67.2 ± 0.1%（10 次运行的平均值），为该领域提供了此前缺乏的定量评估。"
+  },
+
+  "video": {
+    "id": "2859_2A-VEc",
+    "title": {"en": "Video walkthrough", "pt": "Vídeo", "es": "Vídeo", "zh": "视频讲解"},
+    "text": {
+      "en": ["A 41-minute walkthrough of the paper, in Brazilian Portuguese: the problem, the metrics, the data, every model we compared, the domain adaptation study and its limits."],
+      "pt": ["A apresentação completa do artigo em 41 minutos: o problema, as métricas, os dados, cada modelo comparado, o estudo de adaptação ao domínio e os limites."],
+      "es": ["Una presentación de 41 minutos del artículo, en portugués de Brasil: el problema, las métricas, los datos, cada modelo comparado, el estudio de adaptación al dominio y sus límites."],
+      "zh": ["41 分钟的论文完整讲解（巴西葡萄牙语）：问题、评估指标、数据、所有对比模型、领域自适应实验及其局限。"]
+    },
+    "poster": "static/images/video-poster.jpg",
+    "alt": {"en": "Play the video walkthrough of the paper", "pt": "Assistir ao vídeo do artigo", "es": "Ver el vídeo del artículo", "zh": "播放论文讲解视频"},
+    "chaptersLabel": {"en": "Chapters", "pt": "Capítulos", "es": "Capítulos", "zh": "章节"},
+    "chapters": [
+      {"t": 0, "label": {"en": "Opening", "pt": "Abertura", "es": "Apertura", "zh": "开场"}},
+      {"t": 97, "label": {"en": "The problem", "pt": "O problema", "es": "El problema", "zh": "问题"}},
+      {"t": 225, "label": {"en": "The gap and our plan", "pt": "O que faltava e o nosso plano", "es": "Lo que faltaba y nuestro plan", "zh": "研究空白与方案"}},
+      {"t": 358, "label": {"en": "Metrics", "pt": "As métricas", "es": "Las métricas", "zh": "评估指标"}},
+      {"t": 732, "label": {"en": "Data", "pt": "Os dados", "es": "Los datos", "zh": "数据"}},
+      {"t": 836, "label": {"en": "Detectors", "pt": "Os detectores", "es": "Los detectores", "zh": "检测器"}},
+      {"t": 1258, "label": {"en": "Pose estimators", "pt": "Os estimadores", "es": "Los estimadores", "zh": "姿态估计器"}},
+      {"t": 1600, "label": {"en": "Domain adaptation", "pt": "A adaptação", "es": "La adaptación", "zh": "领域自适应"}},
+      {"t": 1894, "label": {"en": "Statistics", "pt": "A estatística", "es": "La estadística", "zh": "统计检验"}},
+      {"t": 1959, "label": {"en": "Results", "pt": "Os resultados", "es": "Los resultados", "zh": "结果"}},
+      {"t": 2288, "label": {"en": "Applications and limits", "pt": "Para que serve e limites", "es": "Para qué sirve y límites", "zh": "应用与局限"}},
+      {"t": 2375, "label": {"en": "Closing", "pt": "Fechamento", "es": "Cierre", "zh": "结语"}}
+    ]
   },
 
   "pipeline": {

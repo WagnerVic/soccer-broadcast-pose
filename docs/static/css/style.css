@@ -266,6 +266,33 @@ h2 {
 .figure { margin: 26px 0 0; }
 .figure img { width: 100%; border-radius: var(--radius); }
 
+/* ---------- video (YouTube player loads only on click) ---------- */
+
+.video-embed { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius); overflow: hidden; background: #000; }
+.video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-facade { position: absolute; inset: 0; padding: 0; border: 0; background: none; cursor: pointer; }
+.figure .video-facade img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
+.video-play {
+  position: absolute; left: 50%; top: 50%; width: 76px; height: 54px; margin: -27px 0 0 -38px;
+  border-radius: 14px; background: #ff0000; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35); transition: transform 0.15s;
+}
+.video-play::after {
+  content: ""; position: absolute; left: 30px; top: 15px;
+  border-style: solid; border-width: 12px 0 12px 21px; border-color: transparent transparent transparent #fff;
+}
+.video-facade:hover .video-play { transform: scale(1.08); }
+.video-facade:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.block .chapters-title { margin: 18px 0 8px; font-size: 0.9rem; font-weight: 600; color: var(--muted); }
+.chapters { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.chapters button {
+  display: inline-flex; align-items: baseline; gap: 6px; padding: 5px 11px;
+  border: 1px solid var(--border); border-radius: 999px; background: var(--surface); color: var(--fg);
+  font: inherit; font-size: 0.9rem; cursor: pointer;
+}
+.chapters button:hover { border-color: var(--accent); }
+.chapters button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.chapters .time { color: var(--accent); font-weight: 600; font-variant-numeric: tabular-nums; }
+
 /* ---------- tables ---------- */
 
 .table-figure { margin: 26px 0 0; }

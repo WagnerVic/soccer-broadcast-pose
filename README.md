@@ -11,6 +11,7 @@ Institute of Informatics, Federal University of Goiás (UFG), Brazil
 
 <a href="https://wagnervic.github.io/soccer-broadcast-pose/"><img src="https://img.shields.io/badge/Project%20Page-1f7a4d?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyLjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI%2BPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz48cGF0aCBkPSJNMiAxMmgyMCIvPjxwYXRoIGQ9Ik0xMiAyYTE1LjMgMTUuMyAwIDAgMSA0IDEwIDE1LjMgMTUuMyAwIDAgMS00IDEwIDE1LjMgMTUuMyAwIDAgMS00LTEwIDE1LjMgMTUuMyAwIDAgMSA0LTEweiIvPjwvc3ZnPgo%3D" alt="Project page"></a>
 <a href="#citation"><img src="https://img.shields.io/badge/Paper-coming%20soon-lightgrey?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyLjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI%2BPHBhdGggZD0iTTE0IDJINmEyIDIgMCAwIDAtMiAydjE2YTIgMiAwIDAgMCAyIDJoMTJhMiAyIDAgMCAwIDItMlY4eiIvPjxwYXRoIGQ9Ik0xNCAydjZoNiIvPjxwYXRoIGQ9Ik04IDEzaDgiLz48cGF0aCBkPSJNOCAxN2g4Ii8%2BPC9zdmc%2BCg%3D%3D" alt="Paper: coming soon"></a>
+<a href="https://youtu.be/2859_2A-VEc"><img src="https://img.shields.io/badge/Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Video walkthrough on YouTube"></a>
 
 [![CI](https://github.com/WagnerVic/soccer-broadcast-pose/actions/workflows/ci.yml/badge.svg)](https://github.com/WagnerVic/soccer-broadcast-pose/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -66,6 +67,14 @@ one — without new data and without a bigger model.
 - **What augmentation really buys is geometry.** Horizontal flip plus rotation, scale and shift
   account for about 90% of the augmentation gain; synthetic occlusion and motion blur add about
   0.7 pp each.
+
+## Video walkthrough
+
+<p align="center"><a href="https://youtu.be/2859_2A-VEc"><img src="docs/assets/video-thumb.jpg" width="640" alt="Video walkthrough of the paper on YouTube"></a></p>
+
+A 41-minute walkthrough of the paper, in Brazilian Portuguese: the problem, the metrics, the data,
+every model we compared, the domain adaptation study and its limits. Jump to a chapter:
+[The problem](https://youtu.be/2859_2A-VEc?t=97) (1:37) · [The gap and our plan](https://youtu.be/2859_2A-VEc?t=225) (3:45) · [Metrics](https://youtu.be/2859_2A-VEc?t=358) (5:58) · [Data](https://youtu.be/2859_2A-VEc?t=732) (12:12) · [Detectors](https://youtu.be/2859_2A-VEc?t=836) (13:56) · [Pose estimators](https://youtu.be/2859_2A-VEc?t=1258) (20:58) · [Domain adaptation](https://youtu.be/2859_2A-VEc?t=1600) (26:40) · [Statistics](https://youtu.be/2859_2A-VEc?t=1894) (31:34) · [Results](https://youtu.be/2859_2A-VEc?t=1959) (32:39) · [Applications and limits](https://youtu.be/2859_2A-VEc?t=2288) (38:08).
 
 ## How it works
 

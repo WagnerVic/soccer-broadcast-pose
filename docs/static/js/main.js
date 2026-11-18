@@ -4,6 +4,7 @@ const ICONS = {
   paper: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>',
   code: '<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>',
   bibtex: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>',
+  video: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg>',
   moon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>',
   sun: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>',
 };
@@ -21,28 +22,28 @@ const LANGS = {
   en: {
     name: "English", htmlLang: "en", decimal: ".",
     abstract: "Abstract", paper: "Paper", paperSoon: "Paper (coming soon)", paperSoonTitle: "Link to the publication coming soon",
-    code: "Code", copy: "Copy", copied: "Copied", nav: "Paper, code and citation", languages: "Language",
+    code: "Code", video: "Video", copy: "Copy", copied: "Copied", nav: "Paper, code, video and citation", languages: "Language",
     theme: "Switch between light and dark mode", pck: "PCK@0.2", gap: "gap", pp: "pp",
     accepted: (v) => `Accepted at ${v}`, published: (v) => `Published at ${v}`,
   },
   pt: {
     name: "Português", htmlLang: "pt-BR", decimal: ",",
     abstract: "Resumo", paper: "Artigo", paperSoon: "Artigo (em breve)", paperSoonTitle: "Link para a publicação em breve",
-    code: "Código", copy: "Copiar", copied: "Copiado", nav: "Artigo, código e citação", languages: "Idioma",
+    code: "Código", video: "Vídeo", copy: "Copiar", copied: "Copiado", nav: "Artigo, código, vídeo e citação", languages: "Idioma",
     theme: "Alternar entre modo claro e escuro", pck: "PCK@0,2", gap: "gap", pp: "pp",
     accepted: (v) => `Aceito no ${v}`, published: (v) => `Publicado no ${v}`,
   },
   es: {
     name: "Español", htmlLang: "es", decimal: ",",
     abstract: "Resumen", paper: "Artículo", paperSoon: "Artículo (próximamente)", paperSoonTitle: "Enlace a la publicación próximamente",
-    code: "Código", copy: "Copiar", copied: "Copiado", nav: "Artículo, código y cita", languages: "Idioma",
+    code: "Código", video: "Vídeo", copy: "Copiar", copied: "Copiado", nav: "Artículo, código, vídeo y cita", languages: "Idioma",
     theme: "Cambiar entre modo claro y oscuro", pck: "PCK@0,2", gap: "brecha", pp: "p. p.",
     accepted: (v) => `Aceptado en ${v}`, published: (v) => `Publicado en ${v}`,
   },
   zh: {
     name: "中文", htmlLang: "zh-CN", decimal: ".",
     abstract: "摘要", paper: "论文", paperSoon: "论文（即将发布）", paperSoonTitle: "出版物链接即将发布",
-    code: "代码", copy: "复制", copied: "已复制", nav: "论文、代码与引用", languages: "语言",
+    code: "代码", video: "视频", copy: "复制", copied: "已复制", nav: "论文、代码、视频与引用", languages: "语言",
     theme: "切换浅色/深色模式", pck: "PCK@0.2", gap: "差距", pp: "个百分点",
     accepted: (v) => `已被 ${v} 接收`, published: (v) => `发表于 ${v}`,
   },
@@ -196,13 +197,19 @@ function renderIntro(data) {
   const code = el("a", { class: "btn", href: data.links.code, target: "_blank", rel: "noopener" });
   code.innerHTML = ICONS.code + ui().code;
 
+  let video = null;
+  if (data.links.video) {
+    video = el("a", { class: "btn", href: data.links.video, target: "_blank", rel: "noopener" });
+    video.innerHTML = ICONS.video + ui().video;
+  }
+
   const bib = el("button", { class: "btn", type: "button", "aria-expanded": String(!block.hidden), "aria-controls": "bibtex" });
   bib.innerHTML = ICONS.bibtex + "BibTeX";
   bib.addEventListener("click", () => {
     block.hidden = !block.hidden;
     bib.setAttribute("aria-expanded", String(!block.hidden));
   });
-  buttons.replaceChildren(paper, code, bib);
+  buttons.replaceChildren(...[paper, code, video, bib].filter(Boolean));
 
   document.getElementById("bibtex-code").textContent = data.bibtex;
   setHTML(document.getElementById("bibtex-note"), data.bibtexNote);
@@ -241,6 +248,54 @@ function renderHero(data) {
   );
   document.getElementById("abstract-title").textContent = ui().abstract;
   setHTML(document.getElementById("abstract"), data.abstract);
+}
+
+// YouTube video: only the poster loads with the page; the player (youtube-nocookie) loads on click.
+// Each chapter button starts the player at that point.
+function renderVideo(spec) {
+  const section = document.getElementById("video");
+  section.hidden = !spec;
+  if (!spec) return;
+  sectionShell("video", spec);
+  const mmss = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+  const frame = el("div", { class: "video-embed" });
+  const play = (start) => {
+    const src = `https://www.youtube-nocookie.com/embed/${spec.id}?autoplay=1&rel=0${start ? `&start=${start}` : ""}`;
+    frame.replaceChildren(
+      el("iframe", {
+        src,
+        title: t(spec.title),
+        allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+        referrerpolicy: "strict-origin-when-cross-origin",
+        allowfullscreen: true,
+      }),
+    );
+  };
+  const facade = el(
+    "button",
+    { class: "video-facade", type: "button", "aria-label": t(spec.alt) },
+    el("img", { src: spec.poster, width: 1280, height: 720, alt: "", loading: "lazy", decoding: "async" }),
+    el("span", { class: "video-play", "aria-hidden": "true" }),
+  );
+  facade.addEventListener("click", () => play(0));
+  frame.append(facade);
+  const chapters = el(
+    "ol",
+    { class: "chapters", "aria-label": t(spec.chaptersLabel) },
+    ...spec.chapters.map((c) => {
+      const button = el("button", { type: "button" }, el("span", { class: "time" }, mmss(c.t)), t(c.label));
+      button.addEventListener("click", () => {
+        play(c.t);
+        frame.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+      return el("li", {}, button);
+    }),
+  );
+  section.append(
+    el("figure", { class: "figure" }, frame),
+    el("p", { class: "chapters-title" }, t(spec.chaptersLabel)),
+    chapters,
+  );
 }
 
 function table(spec) {
@@ -394,6 +449,7 @@ function render() {
   renderLangSwitch();
   renderIntro(data);
   renderHero(data);
+  renderVideo(data.video);
   renderPipeline(data.pipeline);
   renderDetection(data.detection);
   renderAdaptation(data.adaptation);

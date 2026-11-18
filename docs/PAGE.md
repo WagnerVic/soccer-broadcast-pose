@@ -10,16 +10,24 @@ Plain HTML + CSS + a small script, no build step:
 docs/
   index.html              page skeleton + Open Graph / Twitter tags
   .nojekyll               serve files as-is (no Jekyll)
-  assets/                 hero.gif and pipeline_stages.png (shared with the main README)
+  assets/                 hero.gif, pipeline_stages.png and video-thumb.jpg (shared with the main README)
   static/data/paper.json  ALL text, links, numbers, captions and the BibTeX
   static/css/style.css    layout, light and dark themes
   static/js/main.js       renders paper.json into the page
-  static/images/          showcase GIFs, video posters, og-preview.jpg
+  static/images/          showcase GIFs, video posters, video-poster.jpg (YouTube thumbnail), og-preview.jpg
   static/videos/          showcase clips over ~3 MB, re-encoded as WebM + MP4
 ```
 
 The paper PDF is **not** part of the page: `docs/**/*.pdf` is git-ignored, and Pages only serves
 committed files. Do not `git add -f` it. The Paper button links to the publication page instead.
+
+## Video
+
+`links.video` adds the Video button next to Paper and Code. The `video` block in `paper.json`
+(`id`, `title`, `text`, `poster`, `alt`, `chapters` with the start in seconds) renders the Video
+section after the abstract. Only the poster image loads with the page; the YouTube player
+(youtube-nocookie.com) loads when the visitor clicks it or a chapter. Remove the `video` block to
+hide the section. The README uses `assets/video-thumb.jpg`, the same thumbnail with a play button.
 
 ## Languages
 
